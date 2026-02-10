@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="GOD.Express — The Perceptions Of GOD. Thoughts and writings to express the one and only GOD." />
+  <title>GOD.EXPRESS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Ambient background -->
+  <div class="bg">
+    <div class="grain"></div>
+    <div class="stars" aria-hidden="true"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div>
+          <div class="brand-title">GOD.EXPRESS</div>
+          <div class="brand-sub">The Perceptions Of GOD</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#posts">Posts</a>
+        <a href="#bases">Bases</a>
+        <a href="#connect">Stay Connected</a>
+        <a class="ghost" href="terms.html">Terms</a>
+        <a class="ghost" href="privacy.html">Privacy</a>
+      </nav>
+
+      <button id="themeBtn" class="themeBtn" type="button" aria-label="Toggle theme">
+        <span class="themeDot" aria-hidden="true"></span>
+        <span class="themeText">Night</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">ONE • INFINITY • MEANING</p>
+          <h1>Thoughts and writings to express the one and only GOD.</h1>
+          <p class="lede">
+            GOD.EXPRESS is about the expression of GOD — and better understanding of the superpower.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn" href="#posts">Read the Posts</a>
+            <a class="btn btn-ghost" href="#bases">Explore Bases</a>
+          </div>
+
+          <p class="micro">
+            “Unless you are just another <strong>PRETENDER</strong> and you are claiming the <strong>UNSELF</strong>.”
+          </p>
+        </div>
+
+        <div class="hero-card" role="note" aria-label="Essence">
+          <div class="hero-card-top">
+            <div class="pill">Essence</div>
+            <div class="pulse" aria-hidden="true"></div>
+          </div>
+
+          <div class="quote">
+            <p class="quote-line">GOD is the GOD of REAL-TIME DNA</p>
+            <p class="quote-sub">The creator acts. The creation reacts.</p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="meta">
+            <div class="meta-k">Site</div>
+            <div class="meta-v">GOD.Express</div>
+            <div class="meta-k">Mode</div>
+            <div class="meta-v">Static • Fast • GitHub Pages</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTS -->
+    <section id="posts" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Posts</h2>
+          <p class="section-sub">Chronicles in dates — each message as a mirror.</p>
+        </div>
+
+        <div class="controls" role="region" aria-label="Post controls">
+          <input id="searchInput" class="search" type="search" placeholder="Search posts (e.g., DNA, mercy, winter…)" autocomplete="off" />
+          <select id="sortSelect" class="select" aria-label="Sort posts">
+            <option value="new">Newest first</option>
+            <option value="old">Oldest first</option>
+          </select>
+          <button id="clearBtn" class="btn btn-ghost small" type="button">Clear</button>
+        </div>
+
+        <div id="postsList" class="cards" aria-live="polite"></div>
+
+        <noscript>
+          <div class="notice">Enable JavaScript to use search/sort. Your posts still display if you hardcode them, but this template uses JS rendering.</div>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- BASES -->
+    <section id="bases" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Bases</h2>
+          <p class="section-sub">Foundations — distilled into one sharp blade.</p>
+        </div>
+
+        <article class="base">
+          <header class="base-head">
+            <div class="pill">Base1</div>
+            <h3>Matter and Antimatter</h3>
+          </header>
+
+          <div class="base-body">
+            <p>Stop killing on earth</p>
+            <p>No one has the right to kill</p>
+            <p>Learn from these complete opposites which are living peacefully together, that's why we're existed</p>
+            <p>Matter and Antimatter created something which is called "LIFE"</p>
+            <p>But balance turned to unbalance</p>
+            <p>Stop doing sins, not the pretended ones</p>
+            <p>Stay "LOGICAL"</p>
+          </div>
+
+          <footer class="base-foot">
+            <span class="muted">Reviews</span>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section id="connect" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Stay Connected</h2>
+          <p class="section-sub">A simple static subscribe box (works via Formspree).</p>
+        </div>
+
+        <div class="grid2">
+          <form class="form" action="https://formspree.io/f/yourFormId" method="POST">
+            <label class="label" for="email">Email*</label>
+            <input class="input" id="email" name="email" type="email" required placeholder="you@example.com" />
+            <button class="btn" type="submit">Subscribe</button>
+            <p class="muted small">
+              Replace <code>yourFormId</code> with your Formspree ID (free). If you don’t want a form, delete this section.
+            </p>
+          </form>
+
+          <div class="panel">
+            <h3 class="panel-title">Footer note</h3>
+            <p class="muted">
+              © <span id="year"></span> by <strong>GOD.EXPRESS</strong> — Proudly created by <strong>Amin Rahimi</strong>. All Rights Reserved.
+            </p>
+            <p class="muted">
+              By accessing and using this page you agree to the Terms &amp; Conditions and the Privacy Policy.
+            </p>
+            <div class="panel-links">
+              <a href="terms.html">Terms &amp; Conditions</a>
+              <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="muted">
+        <span>GOD.EXPRESS</span>
+        <span class="dot">•</span>
+        <a href="#home">Top</a>
+      </div>
+      <div class="muted">
+        <a href="terms.html">Terms</a>
+        <span class="dot">•</span>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
