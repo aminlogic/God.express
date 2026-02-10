@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 • GOD.EXPRESS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg"><div class="grain"></div><div class="stars"></div></div>
+
+  <main class="section">
+    <div class="wrap">
+      <article class="card">
+        <div class="body">
+          <h2 style="margin-top:0">404</h2>
+          <p class="muted">This page does not exist — but the meaning still does.</p>
+          <p><a class="btn" href="index.html#home">Return to Home</a></p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    const saved = localStorage.getItem("theme") || "night";
+    document.documentElement.dataset.theme = saved === "day" ? "day" : "night";
+  </script>
+</body>
+</html>
