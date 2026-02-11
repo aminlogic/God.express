@@ -144,7 +144,7 @@ body{
 
 .hero-inner{
   display:grid;
-  grid-template-columns: 1.3fr 0.9fr;
+  grid-template-columns: 1.3fr 1fr;
   gap:50px;
   align-items:center;
 }
@@ -206,6 +206,65 @@ body{
 .btn.ghost:hover{
   border-color:rgba(201,162,39,0.55);
   color:var(--accent);
+}
+
+/* Hero Card */
+.hero-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:22px;
+  padding:20px;
+  box-shadow:0 18px 55px rgba(0,0,0,0.55);
+}
+
+/* Two Image Layout */
+.hero-two-images{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.hero-left-box{
+  width:40%;
+  text-align:center;
+}
+
+.hero-right-box{
+  width:60%;
+}
+
+.hero-avatar{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:2px solid rgba(201,162,39,0.55);
+  object-fit:cover;
+  box-shadow:0 0 30px rgba(201,162,39,0.25);
+}
+
+.hero-quote{
+  margin-top:14px;
+  font-family:Cinzel, serif;
+  font-size:16px;
+  letter-spacing:1px;
+  color:rgba(255,255,255,0.9);
+}
+
+.hero-small{
+  margin-top:6px;
+  font-size:12px;
+  letter-spacing:1px;
+  color:rgba(255,255,255,0.60);
+}
+
+.hero-og{
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  border:2px solid rgba(255,255,255,0.15);
+  box-shadow:0 20px 60px rgba(0,0,0,0.55);
+  object-fit:cover;
 }
 
 /* Sections */
@@ -289,12 +348,14 @@ body{
   color:rgba(255,255,255,0.60);
   margin-bottom:12px;
   letter-spacing:1px;
+  text-align:center;
 }
 
 .post-body{
   font-size:15px;
   line-height:1.8;
   color:rgba(255,255,255,0.82);
+  text-align:center;
 }
 
 .post-body p{
@@ -364,5 +425,14 @@ body{
 
   .hero-left h1{
     font-size:40px;
+  }
+
+  .hero-two-images{
+    flex-direction:column;
+  }
+
+  .hero-left-box,
+  .hero-right-box{
+    width:100%;
   }
 }
