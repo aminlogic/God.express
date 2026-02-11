@@ -1,5 +1,3 @@
-let allPosts = [];
-
 async function loadPosts() {
   try {
     const res = await fetch("posts.txt");
@@ -7,7 +5,7 @@ async function loadPosts() {
 
     const blocks = text.split("-----").map(b => b.trim()).filter(b => b.length > 0);
 
-    allPosts = blocks.map(block => {
+    const posts = blocks.map(block => {
       const lines = block.split("\n").map(l => l.trim()).filter(l => l.length > 0);
 
       let dateLine = lines.find(l => l.toLowerCase().startsWith("date:"));
@@ -21,7 +19,7 @@ async function loadPosts() {
       };
     });
 
-    renderPosts(allPosts);
+    renderPosts(posts);
 
   } catch (err) {
     console.error("Error loading posts:", err);
@@ -52,27 +50,7 @@ function renderPosts(posts) {
   });
 }
 
-function filterPosts() {
-  const searchValue = document.getElementById("searchInput").value.toLowerCase();
-  const sortValue = document.getElementById("sortSelect").value;
-
-  let filtered = allPosts.filter(post =>
-    post.body.join(" ").toLowerCase().includes(searchValue) ||
-    post.date.toLowerCase().includes(searchValue)
-  );
-
-  if (sortValue === "newest") {
-    filtered.reverse();
-  }
-
-  renderPosts(filtered);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   loadPosts();
-
-  document.getElementById("searchInput").addEventListener("input", filterPosts);
-  document.getElementById("sortSelect").addEventListener("change", filterPosts);
-
   document.getElementById("year").textContent = new Date().getFullYear();
 });
