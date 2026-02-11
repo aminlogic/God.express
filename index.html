@@ -1,199 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="GOD.Express — The Perceptions Of GOD. Thoughts and writings to express the one and only GOD." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>GOD.EXPRESS</title>
+  <meta name="description" content="THE PERCEPTIONS OF GOD" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GOD.EXPRESS" />
+  <meta property="og:title" content="THE PERCEPTIONS OF GOD" />
+  <meta property="og:description" content="THE PERCEPTIONS OF GOD" />
+  <meta property="og:url" content="https://www.god.express/" />
+  <meta property="og:image" content="https://www.god.express/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="THE PERCEPTIONS OF GOD" />
+  <meta name="twitter:description" content="THE PERCEPTIONS OF GOD" />
+  <meta name="twitter:image" content="https://www.god.express/assets/og.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Ambient background -->
+  <!-- Background -->
   <div class="bg">
+    <div class="stars"></div>
+    <div class="fog"></div>
     <div class="grain"></div>
-    <div class="stars" aria-hidden="true"></div>
   </div>
 
-  <header class="site-header">
+  <!-- Header -->
+  <header class="header">
     <div class="wrap header-inner">
+
       <div class="brand">
-        <div class="sigil" aria-hidden="true"></div>
+        <img class="brand-img" src="assets/profile.jpg" alt="GOD.EXPRESS">
         <div>
           <div class="brand-title">GOD.EXPRESS</div>
-          <div class="brand-sub">The Perceptions Of GOD</div>
+          <div class="brand-sub">THE PERCEPTIONS OF GOD</div>
         </div>
       </div>
 
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav">
         <a href="#home">Home</a>
         <a href="#posts">Posts</a>
         <a href="#bases">Bases</a>
-        <a href="#connect">Stay Connected</a>
-        <a class="ghost" href="terms.html">Terms</a>
-        <a class="ghost" href="privacy.html">Privacy</a>
       </nav>
 
-      <button id="themeBtn" class="themeBtn" type="button" aria-label="Toggle theme">
-        <span class="themeDot" aria-hidden="true"></span>
-        <span class="themeText">Night</span>
-      </button>
     </div>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="kicker">ONE • INFINITY • MEANING</p>
-          <h1>Thoughts and writings to express the one and only GOD.</h1>
-          <p class="lede">
-            GOD.EXPRESS is about the expression of GOD — and better understanding of the superpower.
-          </p>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="wrap hero-inner">
 
-          <div class="cta-row">
-            <a class="btn" href="#posts">Read the Posts</a>
-            <a class="btn btn-ghost" href="#bases">Explore Bases</a>
-          </div>
+      <div class="hero-left">
+        <h1>
+          THE PERCEPTIONS<br>
+          OF <span class="glow">GOD</span>
+        </h1>
 
-          <p class="micro">
-            “Unless you are just another <strong>PRETENDER</strong> and you are claiming the <strong>UNSELF</strong>.”
-          </p>
-        </div>
+        <p class="hero-desc">
+          GOD.EXPRESS is a place to publish thoughts and writings to express the one and only GOD.
+        </p>
 
-        <div class="hero-card" role="note" aria-label="Essence">
-          <div class="hero-card-top">
-            <div class="pill">Essence</div>
-            <div class="pulse" aria-hidden="true"></div>
-          </div>
-
-          <div class="quote">
-            <p class="quote-line">GOD is the GOD of REAL-TIME DNA</p>
-            <p class="quote-sub">The creator acts. The creation reacts.</p>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="meta">
-            <div class="meta-k">Site</div>
-            <div class="meta-v">GOD.Express</div>
-            <div class="meta-k">Mode</div>
-            <div class="meta-v">Static • Fast • GitHub Pages</div>
-          </div>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#posts">Read Posts</a>
+          <a class="btn ghost" href="#bases">Read Bases</a>
         </div>
       </div>
-    </section>
 
-    <!-- POSTS -->
-    <section id="posts" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Posts</h2>
-          <p class="section-sub">Chronicles in dates — each message as a mirror.</p>
-        </div>
-
-        <div class="controls" role="region" aria-label="Post controls">
-          <input id="searchInput" class="search" type="search" placeholder="Search posts (e.g., DNA, mercy, winter…)" autocomplete="off" />
-          <select id="sortSelect" class="select" aria-label="Sort posts">
-            <option value="new">Newest first</option>
-            <option value="old">Oldest first</option>
-          </select>
-          <button id="clearBtn" class="btn btn-ghost small" type="button">Clear</button>
-        </div>
-
-        <div id="postsList" class="cards" aria-live="polite"></div>
-
-        <noscript>
-          <div class="notice">Enable JavaScript to use search/sort. Your posts still display if you hardcode them, but this template uses JS rendering.</div>
-        </noscript>
-      </div>
-    </section>
-
-    <!-- BASES -->
-    <section id="bases" class="section alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Bases</h2>
-          <p class="section-sub">Foundations — distilled into one sharp blade.</p>
-        </div>
-
-        <article class="base">
-          <header class="base-head">
-            <div class="pill">Base1</div>
-            <h3>Matter and Antimatter</h3>
-          </header>
-
-          <div class="base-body">
-            <p>Stop killing on earth</p>
-            <p>No one has the right to kill</p>
-            <p>Learn from these complete opposites which are living peacefully together, that's why we're existed</p>
-            <p>Matter and Antimatter created something which is called "LIFE"</p>
-            <p>But balance turned to unbalance</p>
-            <p>Stop doing sins, not the pretended ones</p>
-            <p>Stay "LOGICAL"</p>
-          </div>
-
-          <footer class="base-foot">
-            <span class="muted">Reviews</span>
-          </footer>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONNECT -->
-    <section id="connect" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Stay Connected</h2>
-          <p class="section-sub">A simple static subscribe box (works via Formspree).</p>
-        </div>
-
-        <div class="grid2">
-          <form class="form" action="https://formspree.io/f/yourFormId" method="POST">
-            <label class="label" for="email">Email*</label>
-            <input class="input" id="email" name="email" type="email" required placeholder="you@example.com" />
-            <button class="btn" type="submit">Subscribe</button>
-            <p class="muted small">
-              Replace <code>yourFormId</code> with your Formspree ID (free). If you don’t want a form, delete this section.
-            </p>
-          </form>
-
-          <div class="panel">
-            <h3 class="panel-title">Footer note</h3>
-            <p class="muted">
-              © <span id="year"></span> by <strong>GOD.EXPRESS</strong> — Proudly created by <strong>Amin Rahimi</strong>. All Rights Reserved.
-            </p>
-            <p class="muted">
-              By accessing and using this page you agree to the Terms &amp; Conditions and the Privacy Policy.
-            </p>
-            <div class="panel-links">
-              <a href="terms.html">Terms &amp; Conditions</a>
-              <a href="privacy.html">Privacy Policy</a>
-            </div>
-          </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <img src="assets/profile.jpg" alt="Profile" class="hero-avatar">
+          <p class="hero-quote">GOD.EXPRESS</p>
+          <p class="hero-small">THE PERCEPTIONS OF GOD</p>
         </div>
       </div>
-    </section>
 
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div class="muted">
-        <span>GOD.EXPRESS</span>
-        <span class="dot">•</span>
-        <a href="#home">Top</a>
-      </div>
-      <div class="muted">
-        <a href="terms.html">Terms</a>
-        <span class="dot">•</span>
-        <a href="privacy.html">Privacy</a>
-      </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- Posts -->
+  <section id="posts" class="section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <h2>Posts</h2>
+        <p>All writings are loaded directly from posts.txt</p>
+      </div>
+
+      <div class="search-row">
+        <input id="searchInput" class="search" type="text" placeholder="Search posts..." />
+        <select id="sortSelect" class="select">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+      </div>
+
+      <div id="postsContainer" class="posts"></div>
+
+    </div>
+  </section>
+
+  <!-- Bases -->
+  <section id="bases" class="section alt">
+    <div class="wrap">
+
+      <div class="section-head">
+        <h2>Bases</h2>
+        <p>The 3 bases are always at the bottom.</p>
+      </div>
+
+      <div class="bases-grid">
+
+        <div class="base-card">
+          <h3>Base1:</h3>
+          <div class="base-body">
+            Matter and Antimatter<br><br>
+            Stop killing on earth<br><br>
+            No one has the right to kill<br><br>
+            Learn from these complete opposites which are living peacefully together, that's why we're existed<br><br>
+            Matter and Antimatter created something which is called "LIFE"<br><br>
+            But balance turned to unbalance<br><br>
+            Stop doing sins, not the pretended ones<br><br>
+            Stay "LOGICAL"
+          </div>
+        </div>
+
+        <div class="base-card">
+          <h3>Base2:</h3>
+          <div class="base-body">
+            Dear sisterhoods and brotherhoods<br><br>
+            What is the difference between GOD and SATAN?<br><br>
+            X &lt; Y<br><br>
+            X &gt; Y<br><br>
+            These equations could have completely same meanings,<br><br>
+            It's just the matter of putting which one on the sides,<br><br>
+            And these are equations that you choose, all the time,<br><br>
+            Which is wrong most of the time,<br><br>
+            But GOD always chooses this equation which is always right<br><br>
+            X &lt; Y = X &gt; Y<br><br>
+            Your pens are broken<br><br>
+            And the consequences are visibly invisible
+          </div>
+        </div>
+
+        <div class="base-card">
+          <h3>Base3:</h3>
+          <div class="base-body">
+            What is the role of the King in chess and real life? What is the role of the one and only GOD in an imaginary chess and real life?<br><br>
+            King:<br><br>
+            The movement of the king in chess is very restrictive, The king can't even move when the game starts, but the whole game is based on the king and the king is a game changer, because in order to win the game gotta reach the opposite king.<br><br>
+            GOD:<br><br>
+            I do respect to the one only GOD, which all religions are talking about and I'm ok with the opposites.<br><br>
+            What if GOD decides to play a complicated game as an imaginary chess?<br><br>
+            There is no competitor because he is one and only and he can play on both sides.<br><br>
+            The lives are his, The games are his, The Kings are his.<br><br>
+            Ladies and gentlemen<br><br>
+            The GOD is so powerful, The GOD is so GOD
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-note">
+        © <span id="year"></span> GOD.EXPRESS
+      </div>
+
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
