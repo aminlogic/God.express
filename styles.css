@@ -202,16 +202,24 @@ body{
   color:var(--accent);
 }
 
-.btn.research{
+{
   background:rgba(0,0,0,0.35);
   border:1px solid rgba(122,92,255,0.45);
   color:rgba(255,255,255,0.85);
 }
 
-.btn.research:hover{
-  transform:translateY(-2px);
-  border-color:rgba(122,92,255,0.9);
+.btn.research{
+  background:linear-gradient(135deg, rgba(201,162,39,0.95), rgba(122,92,255,0.85));
+  border:1px solid rgba(255,255,255,0.18);
   color:white;
+  font-weight:700;
+  box-shadow:0 15px 40px rgba(0,0,0,0.55);
+}
+
+.btn.research:hover{
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 25px 70px rgba(201,162,39,0.25);
+  border-color:rgba(255,255,255,0.35);
 }
 
 /* Right Hero Image Frame */
