@@ -291,17 +291,17 @@ a{
   text-align:center;
 }
 
-/* THIS MAKES TXT LOOK EXACTLY SAME */
 .post-text{
   font-family: "Segoe UI", Arial, sans-serif;
   font-size:13px;
-  color:rgba(255,255,255,0.86);
+  color:rgba(255,255,255,0.88);
   text-align:center;
   line-height:1.9;
-  white-space:pre-wrap;   /* KEEP SPACES + BLANK LINES */
-  word-wrap:break-word;
+  white-space:pre-wrap;     /* keeps blank lines */
+  word-break:break-word;
   margin:0;
 }
+
 
 /* FOOTER */
 .footer{
