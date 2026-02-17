@@ -3,15 +3,17 @@ async function loadPosts() {
     const res = await fetch("posts.txt");
     const text = await res.text();
 
+    // Split posts by separator line -----
     const blocks = text.split("-----").map(b => b.trim()).filter(b => b.length > 0);
 
     const posts = blocks.map(block => {
-      const lines = block.split("\n").map(l => l.trim()).filter(l => l.length > 0);
+      const rawLines = block.split("\n"); // KEEP empty lines
 
-      let dateLine = lines.find(l => l.toLowerCase().startsWith("date:"));
+      let dateLine = rawLines.find(l => l.toLowerCase().startsWith("date:"));
       let date = dateLine ? dateLine.replace("Date:", "").trim() : "";
 
-      let bodyLines = lines.filter(l => !l.toLowerCase().startsWith("date:"));
+      // Remove date line but keep all spacing lines
+      let bodyLines = rawLines.filter(l => !l.toLowerCase().startsWith("date:"));
 
       return {
         date: date,
@@ -39,10 +41,18 @@ function renderPosts(posts) {
       dateHTML = `<div class="post-date">Date: ${post.date}</div>`;
     }
 
+    // Keep empty lines as spacing
+    const bodyHTML = post.body.map(line => {
+      if (line.trim() === "") {
+        return `<div class="blank-line"></div>`;
+      }
+      return `<p>${line}</p>`;
+    }).join("");
+
     div.innerHTML = `
       ${dateHTML}
       <div class="post-body">
-        ${post.body.map(line => `<p>${line}</p>`).join("")}
+        ${bodyHTML}
       </div>
     `;
 
