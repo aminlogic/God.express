@@ -1,7 +1,6 @@
 :root{
   --bg:#07070b;
   --panel:rgba(0,0,0,0.55);
-  --panel2:rgba(255,255,255,0.04);
   --text:#f2f2f2;
   --muted:rgba(255,255,255,0.7);
   --accent:#c9a227;
@@ -117,6 +116,7 @@ a{
   letter-spacing:2px;
   line-height:1.15;
   text-transform:uppercase;
+  text-align:center;
 }
 
 .hero-text p{
@@ -124,6 +124,9 @@ a{
   color:var(--muted);
   font-size:15px;
   max-width:420px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
 }
 
 .powered{
@@ -279,27 +282,25 @@ a{
   border:1px solid rgba(255,255,255,0.06);
 }
 
+/* DATE */
 .post-date{
   font-size:13px;
   font-weight:800;
   color:var(--accent);
-  margin-bottom:10px;
+  margin-bottom:12px;
   text-align:center;
 }
 
-.post-body{
-  text-align:center;
+/* THIS MAKES TXT LOOK EXACTLY SAME */
+.post-text{
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size:13px;
   color:rgba(255,255,255,0.86);
+  text-align:center;
   line-height:1.9;
-}
-
-.post-body p{
-  margin:4px 0;
-}
-
-.blank-line{
-  height:14px;
+  white-space:pre-wrap;   /* KEEP SPACES + BLANK LINES */
+  word-wrap:break-word;
+  margin:0;
 }
 
 /* FOOTER */
@@ -321,11 +322,6 @@ a{
 
   .hero-text h1{
     font-size:34px;
-  }
-
-  .hero-text p{
-    margin-left:auto;
-    margin-right:auto;
   }
 
   .og-frame{
