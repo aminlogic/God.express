@@ -3,57 +3,44 @@ async function loadPosts() {
     const res = await fetch("posts.txt");
     const text = await res.text();
 
-    // Split posts by separator line -----
     const blocks = text.split("-----").map(b => b.trim()).filter(b => b.length > 0);
 
-    const posts = blocks.map(block => {
-      const rawLines = block.split("\n"); // KEEP empty lines
-
-      let dateLine = rawLines.find(l => l.toLowerCase().startsWith("date:"));
-      let date = dateLine ? dateLine.replace("Date:", "").trim() : "";
-
-      // Remove date line but keep all spacing lines
-      let bodyLines = rawLines.filter(l => !l.toLowerCase().startsWith("date:"));
-
-      return {
-        date: date,
-        body: bodyLines
-      };
-    });
-
-    renderPosts(posts);
+    renderPosts(blocks);
 
   } catch (err) {
     console.error("Error loading posts:", err);
   }
 }
 
-function renderPosts(posts) {
+function renderPosts(blocks) {
   const container = document.getElementById("postsContainer");
   container.innerHTML = "";
 
-  posts.forEach(post => {
+  blocks.forEach(block => {
     const div = document.createElement("div");
     div.className = "post";
 
-    let dateHTML = "";
-    if (post.date && post.date !== "") {
-      dateHTML = `<div class="post-date">Date: ${post.date}</div>`;
+    // Extract Date line if exists
+    let lines = block.split("\n");
+    let dateLineIndex = lines.findIndex(l => l.toLowerCase().startsWith("date:"));
+
+    let date = "";
+    if (dateLineIndex !== -1) {
+      date = lines[dateLineIndex].replace("Date:", "").trim();
+      lines.splice(dateLineIndex, 1); // remove date line
     }
 
-    // Keep empty lines as spacing
-    const bodyHTML = post.body.map(line => {
-      if (line.trim() === "") {
-        return `<div class="blank-line"></div>`;
-      }
-      return `<p>${line}</p>`;
-    }).join("");
+    let dateHTML = "";
+    if (date !== "") {
+      dateHTML = `<div class="post-date">Date: ${date}</div>`;
+    }
+
+    // Join remaining lines exactly as they are
+    const bodyText = lines.join("\n");
 
     div.innerHTML = `
       ${dateHTML}
-      <div class="post-body">
-        ${bodyHTML}
-      </div>
+      <pre class="post-text">${bodyText}</pre>
     `;
 
     container.appendChild(div);
