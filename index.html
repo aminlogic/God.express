@@ -1,199 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>GOD.EXPRESS</title>
-  <meta name="description" content="" />
+<title>GOD.EXPRESS</title>
+<meta name="description" content="The Perceptions of God, powered by Amin Rahimi." />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="GOD.EXPRESS" />
-  <meta property="og:title" content="The Perceptions of God, Powered by Amin Rahimi" />
-  <meta property="og:description" content="" />
-  <meta property="og:url" content="https://www.god.express/" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/aminlogic/God.express/main/assets/Facebook.jpg" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GOD.EXPRESS" />
+<meta property="og:title" content="The Perceptions of God" />
+<meta property="og:description" content="The Perceptions of God, powered by Amin Rahimi." />
+<meta property="og:url" content="https://god.express/" />
+<meta property="og:image" content="https://god.express/assets/og.jpg" />
 
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="THE PERCEPTIONS OF GOD" />
-  <meta name="twitter:description" content="THE PERCEPTIONS OF GOD" />
-  <meta name="twitter:image" content="https://www.god.express/assets/og.jpg" />
+<style>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:#0b0f1a;
+  color:#fff;
+  overflow-x:hidden;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+/* WRAPPER */
+.wrap{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+.header{
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.brand-title{
+  font-family:'Cinzel',serif;
+  font-size:22px;
+  letter-spacing:2px;
+}
+.nav a{
+  color:#aaa;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:14px;
+}
+.nav a:hover{color:#fff}
+
+/* HERO */
+.hero{
+  padding:80px 0;
+}
+.hero-grid{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  flex-wrap:wrap;
+}
+.hero-text{
+  flex:1;
+  min-width:300px;
+}
+.hero-title{
+  font-family:'Cinzel',serif;
+  font-size:48px;
+  line-height:1.2;
+  margin-bottom:25px;
+}
+.hero-desc{
+  font-size:16px;
+  color:#bbb;
+  margin-bottom:25px;
+}
+.hero-profile{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-top:15px;
+}
+.hero-buttons{
+  margin-top:30px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.btn{
+  padding:10px 18px;
+  border-radius:8px;
+  font-size:14px;
+  text-decoration:none;
+  transition:0.3s;
+}
+.primary{
+  background:#fff;
+  color:#000;
+}
+.primary:hover{opacity:0.8}
+.ghost{
+  border:1px solid #fff;
+  color:#fff;
+}
+.ghost:hover{background:#fff;color:#000}
+.research{
+  background:#1f2937;
+  color:#fff;
+}
+.research:hover{opacity:0.8}
+
+/* HERO IMAGE FIXED */
+.hero-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+.hero-frame{
+  width:100%;
+  max-width:420px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+}
+.hero-frame img{
+  width:100%;
+  height:380px;       /* FIXED HEIGHT */
+  object-fit:cover;   /* NO STRETCH */
+  display:block;
+}
+.hero-badge{
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  background:rgba(0,0,0,0.6);
+  padding:6px 10px;
+  font-size:12px;
+  border-radius:6px;
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 0;
+}
+.section.alt{
+  background:#111827;
+}
+.section h2{
+  font-family:'Cinzel',serif;
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+/* BASE CARDS */
+.bases-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.base-card{
+  background:#1f2937;
+  padding:25px;
+  border-radius:16px;
+}
+.base-card h3{
+  margin-bottom:15px;
+}
+
+/* FOOTER */
+.footer-note{
+  margin-top:60px;
+  text-align:center;
+  color:#777;
+  font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero-title{font-size:34px}
+  .hero-frame img{
+    height:260px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- Background -->
-  <div class="bg">
-    <div class="stars"></div>
-    <div class="fog"></div>
-    <div class="grain"></div>
+<header class="header">
+  <div class="wrap header-inner">
+    <div class="brand-title">GOD.EXPRESS</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#posts">Posts</a>
+      <a href="#bases">Bases</a>
+    </nav>
   </div>
+</header>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="wrap header-inner">
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
 
-      <div class="brand">
-        <div class="brand-title">GOD.EXPRESS</div>
+    <div class="hero-text">
+      <h1 class="hero-title">
+        THE PERCEPTIONS<br>OF GOD
+      </h1>
+
+      <div class="hero-desc">
+        GOD.EXPRESS is about the expression of GOD<br>
+        Powered by Amin Rahimi
       </div>
 
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#posts">Posts</a>
-        <a href="#bases">Bases</a>
-      </nav>
+      <img src="assets/profile.jpg" class="hero-profile" alt="Profile">
 
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="wrap hero-grid">
-
-      <!-- LEFT -->
-      <div class="hero-text">
-
-        <h1 class="hero-title">
-          THE PERCEPTIONS<br>
-          OF GOD
-        </h1>
-
-        <div class="hero-profile-row">
-
-          <div class="hero-desc">
-            GOD.EXPRESS is about the expression of GOD<br>
-            Powered by Amin Rahimi
-          </div>
-
-          <img src="assets/profile.jpg" class="hero-profile" alt="Profile">
-
-        </div>
-
-        <div class="hero-buttons">
-          <a class="btn primary" href="#posts">Read Posts</a>
-          <a class="btn ghost" href="#bases">Read Bases</a>
-          <a class="btn research" 
-             href="https://www.express.co.uk/news/science/973117/God-face-photograph-Christianity-what-does-god-look-like-study?fbclid=IwAR3hp1VXvI02zJOA6kn_3Uoc7zckHSejNk4P9Y3iGuLVvmn2IRc25tcKGzE"
-             target="_blank">
-             Click to view the research of GOD
-          </a>
-        </div>
-
-      </div>
-
-      <!-- RIGHT -->
-      <div class="hero-image">
-        <a class="hero-frame-link"
-           href="https://www.express.co.uk/news/science/973117/God-face-photograph-Christianity-what-does-god-look-like-study?fbclid=IwAR3hp1VXvI02zJOA6kn_3Uoc7zckHSejNk4P9Y3iGuLVvmn2IRc25tcKGzE"
+      <div class="hero-buttons">
+        <a class="btn primary" href="#posts">Read Posts</a>
+        <a class="btn ghost" href="#bases">Read Bases</a>
+        <a class="btn research"
+           href="https://www.express.co.uk/news/science/973117/God-face-photograph-Christianity-what-does-god-look-like-study"
            target="_blank">
-
-          <div class="hero-frame">
-            <img src="assets/og.jpg" class="hero-og" alt="GOD.EXPRESS">
-            <div class="hero-badge">Copyrighted by express.co.uk</div>
-          </div>
-
+           Research of GOD
         </a>
       </div>
-
     </div>
-  </section>
 
-  <!-- Posts -->
-  <section id="posts" class="section">
-    <div class="wrap">
-
-      <div class="section-head">
-        <h2>Posts</h2>
-      
-      </div>
-
-
-      <div id="postsContainer" class="posts"></div>
-
+    <div class="hero-image">
+      <a href="https://www.express.co.uk/news/science/973117/God-face-photograph-Christianity-what-does-god-look-like-study" target="_blank">
+        <div class="hero-frame">
+          <img src="assets/og.jpg" alt="GOD.EXPRESS">
+          <div class="hero-badge">
+            Copyrighted by express.co.uk
+          </div>
+        </div>
+      </a>
     </div>
-  </section>
 
-  <!-- Bases -->
-  <section id="bases" class="section alt">
-    <div class="wrap">
+  </div>
+</section>
 
-      <div class="section-head">
-        <h2>Bases</h2>
-       
+<section id="posts" class="section">
+  <div class="wrap">
+    <h2>Posts</h2>
+    <p style="color:#888;">Posts section coming soon...</p>
+  </div>
+</section>
+
+<section id="bases" class="section alt">
+  <div class="wrap">
+    <h2>Bases</h2>
+
+    <div class="bases-grid">
+
+      <div class="base-card">
+        <h3>Base1</h3>
+        <p>
+        Matter and Antimatter.<br><br>
+        Stop killing on earth. No one has the right to kill.
+        </p>
       </div>
 
-      <div class="bases-grid">
-
-        <div class="base-card">
-          <h3>Base1:</h3>
-          <div class="base-body">
-            Matter and Antimatter<br><br>
-            Stop killing on earth<br><br>
-            No one has the right to kill<br><br>
-            Learn from these complete opposites which are living peacefully together, that's why we're existed<br><br>
-            Matter and Antimatter created something which is called "LIFE"<br><br>
-            But balance turned to unbalance<br><br>
-            Stop doing sins, not the pretended ones<br><br>
-            Stay "LOGICAL"
-          </div>
-        </div>
-
-        <div class="base-card">
-          <h3>Base2:</h3>
-          <div class="base-body">
-            Dear sisterhoods and brotherhoods<br><br>
-            What is the difference between GOD and SATAN?<br><br>
-            X &lt; Y<br><br>
-            X &gt; Y<br><br>
-            These equations could have completely same meanings,<br><br>
-            It's just the matter of putting which one on the sides,<br><br>
-            And these are equations that you choose, all the time,<br><br>
-            Which is wrong most of the time,<br><br>
-            But GOD always chooses this equation which is always right<br><br>
-            X &lt; Y = X &gt; Y<br><br>
-            Your pens are broken<br><br>
-            And the consequences are visibly invisible
-          </div>
-        </div>
-
-        <div class="base-card">
-          <h3>Base3:</h3>
-          <div class="base-body">
-            What is the role of the King in chess and real life? What is the role of the one and only GOD in an imaginary chess and real life?<br><br>
-            King:<br><br>
-            The movement of the king in chess is very restrictive, The king can't even move when the game starts, but the whole game is based on the king and the king is a game changer, because in order to win the game gotta reach the opposite king.<br><br>
-            GOD:<br><br>
-            I do respect to the one only GOD, which all religions are talking about and I'm ok with the opposites.<br><br>
-            What if GOD decides to play a complicated game as an imaginary chess?<br><br>
-            There is no competitor because he is one and only and he can play on both sides.<br><br>
-            The lives are his, The games are his, The Kings are his.<br><br>
-            Ladies and gentlemen<br><br>
-            The GOD is so powerful, The GOD is so GOD
-          </div>
-        </div>
-
+      <div class="base-card">
+        <h3>Base2</h3>
+        <p>
+        What is the difference between GOD and SATAN?<br><br>
+        X &lt; Y and X &gt; Y.
+        </p>
       </div>
 
-      <div class="footer-note">
-        © <span id="year"></span> GOD.EXPRESS
+      <div class="base-card">
+        <h3>Base3</h3>
+        <p>
+        What is the role of the King in chess and real life?
+        </p>
       </div>
 
     </div>
-  </section>
 
-  <script src="script.js"></script>
+    <div class="footer-note">
+      © 2026 GOD.EXPRESS
+    </div>
+
+  </div>
+</section>
+
 </body>
 </html>
