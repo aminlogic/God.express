@@ -5,15 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>GOD.EXPRESS</title>
-  <meta name="description" content="The Perceptions of God, powered by Amin Rahimi." />
+  <meta name="description" content="" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GOD.EXPRESS" />
   <meta property="og:title" content="The Perceptions of God, Powered by Amin Rahimi" />
-  <meta property="og:description" content="The Perceptions of God, powered by Amin Rahimi." />
+  <meta property="og:description" content="" />
   <meta property="og:url" content="https://www.god.express/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/aminlogic/God.express/main/assets/Facebook.jpg" />
+
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,6 +25,8 @@
   <meta name="twitter:image" content="https://www.god.express/assets/og.jpg" />
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -29,6 +34,13 @@
 </head>
 
 <body>
+
+  <!-- Background -->
+  <div class="bg">
+    <div class="stars"></div>
+    <div class="fog"></div>
+    <div class="grain"></div>
+  </div>
 
   <!-- Header -->
   <header class="header">
@@ -105,11 +117,11 @@
 
       <div class="section-head">
         <h2>Posts</h2>
+      
       </div>
 
-      <div id="postsContainer" class="posts">
-        <!-- Posts will be loaded dynamically from post.txt -->
-      </div>
+
+      <div id="postsContainer" class="posts"></div>
 
     </div>
   </section>
@@ -120,6 +132,7 @@
 
       <div class="section-head">
         <h2>Bases</h2>
+       
       </div>
 
       <div class="bases-grid">
@@ -181,25 +194,6 @@
     </div>
   </section>
 
-  <script>
-    // Load current year
-    document.getElementById("year").innerText = new Date().getFullYear();
-
-    // Load posts dynamically from post.txt
-    fetch('post.txt')
-      .then(response => response.text())
-      .then(data => {
-        const posts = data.split('---'); // assuming each post separated by '---'
-        const container = document.getElementById('postsContainer');
-        posts.forEach(post => {
-          const postDiv = document.createElement('div');
-          postDiv.className = 'post';
-          postDiv.innerHTML = `<div class="post-date">${new Date().toLocaleDateString()}</div>
-                               <div class="post-text">${post.trim().replace(/\n/g, '<br>')}</div>`;
-          container.appendChild(postDiv);
-        });
-      });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
