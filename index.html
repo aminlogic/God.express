@@ -1,116 +1,199 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aminlogic</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
-}
+  <title>GOD.EXPRESS</title>
+  <meta name="description" content="" />
 
-/* ===== TOP SECTION ===== */
-.top-section {
-    text-align: center;
-    padding: 20px 10px;
-}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GOD.EXPRESS" />
+  <meta property="og:title" content="The Perceptions of God, Powered by Amin Rahimi" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="https://www.god.express/" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/aminlogic/God.express/main/assets/Facebook.jpg" />
 
-.top-section img {
-    width: 140px;          /* IMAGE SIZE FIXED */
-    max-width: 60%;
-    height: auto;
-    border-radius: 50%;
-}
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-.top-section h1 {
-    margin: 10px 0 5px;
-}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="THE PERCEPTIONS OF GOD" />
+  <meta name="twitter:description" content="THE PERCEPTIONS OF GOD" />
+  <meta name="twitter:image" content="https://www.god.express/assets/og.jpg" />
 
-.top-section p {
-    margin: 0;
-    font-size: 14px;
-    opacity: 0.8;
-}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-/* ===== BUTTONS ===== */
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0 20px;
-    margin-top: 20px;
-}
-
-.buttons a {
-    text-decoration: none;
-    background: #222;
-    padding: 12px;
-    border-radius: 8px;
-    color: white;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.buttons a:hover {
-    background: #333;
-}
-
-/* ===== POSTS SECTION ===== */
-.posts {
-    margin: 30px 15px;
-    padding: 15px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    white-space: pre-wrap;        /* SHOWS posts.txt EXACTLY */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    font-size: 14px;
-}
-
-/* ===== MOBILE SAFETY ===== */
-* {
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-</style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<div class="top-section">
-    <img src="yourimage.jpg" alt="Aminlogic">
-    <h1>Aminlogic</h1>
-    <p>Mystic • Creator • Digital Philosopher</p>
-</div>
+  <!-- Background -->
+  <div class="bg">
+    <div class="stars"></div>
+    <div class="fog"></div>
+    <div class="grain"></div>
+  </div>
 
-<div class="buttons">
-    <a href="#">Instagram</a>
-    <a href="#">TikTok</a>
-    <a href="#">YouTube</a>
-</div>
+  <!-- Header -->
+  <header class="header">
+    <div class="wrap header-inner">
 
-<div class="posts" id="postsBox">
-Loading posts...
-</div>
+      <div class="brand">
+        <div class="brand-title">GOD.EXPRESS</div>
+      </div>
 
-<script>
-fetch("posts.txt")
-.then(response => response.text())
-.then(data => {
-    document.getElementById("postsBox").textContent = data;
-});
-</script>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#posts">Posts</a>
+        <a href="#bases">Bases</a>
+      </nav>
 
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+
+      <!-- LEFT -->
+      <div class="hero-text">
+
+        <h1 class="hero-title">
+          THE PERCEPTIONS<br>
+          OF GOD
+        </h1>
+
+        <div class="hero-profile-row">
+
+          <div class="hero-desc">
+            GOD.EXPRESS is about the expression of GOD<br>
+            Powered by Amin Rahimi
+          </div>
+
+          <img src="assets/profile.jpg" class="hero-profile" alt="Profile">
+
+        </div>
+
+        <div class="hero-buttons">
+          <a class="btn primary" href="#posts">Read Posts</a>
+          <a class="btn ghost" href="#bases">Read Bases</a>
+          <a class="btn research" 
+             href="https://www.express.co.uk/news/science/973117/God-face-photograph-Christianity-what-does-god-look-like-study?fbclid=IwAR3hp1VXvI02zJOA6kn_3Uoc7zckHSejNk4P9Y3iGuLVvmn2IRc25tcKGzE"
+             target="_blank">
+             Click to view the research of GOD
+          </a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image">
+        <a class="hero-frame-link"
+           href="https://www.express.co.uk/news/science/973117/God-face-photograph-Christianity-what-does-god-look-like-study?fbclid=IwAR3hp1VXvI02zJOA6kn_3Uoc7zckHSejNk4P9Y3iGuLVvmn2IRc25tcKGzE"
+           target="_blank">
+
+          <div class="hero-frame">
+            <img src="assets/og.jpg" class="hero-og" alt="GOD.EXPRESS">
+            <div class="hero-badge">Copyrighted by express.co.uk</div>
+          </div>
+
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Posts -->
+  <section id="posts" class="section">
+    <div class="wrap">
+
+      <div class="section-head">
+        <h2>Posts</h2>
+      
+      </div>
+
+
+      <div id="postsContainer" class="posts"></div>
+
+    </div>
+  </section>
+
+  <!-- Bases -->
+  <section id="bases" class="section alt">
+    <div class="wrap">
+
+      <div class="section-head">
+        <h2>Bases</h2>
+       
+      </div>
+
+      <div class="bases-grid">
+
+        <div class="base-card">
+          <h3>Base1:</h3>
+          <div class="base-body">
+            Matter and Antimatter<br><br>
+            Stop killing on earth<br><br>
+            No one has the right to kill<br><br>
+            Learn from these complete opposites which are living peacefully together, that's why we're existed<br><br>
+            Matter and Antimatter created something which is called "LIFE"<br><br>
+            But balance turned to unbalance<br><br>
+            Stop doing sins, not the pretended ones<br><br>
+            Stay "LOGICAL"
+          </div>
+        </div>
+
+        <div class="base-card">
+          <h3>Base2:</h3>
+          <div class="base-body">
+            Dear sisterhoods and brotherhoods<br><br>
+            What is the difference between GOD and SATAN?<br><br>
+            X &lt; Y<br><br>
+            X &gt; Y<br><br>
+            These equations could have completely same meanings,<br><br>
+            It's just the matter of putting which one on the sides,<br><br>
+            And these are equations that you choose, all the time,<br><br>
+            Which is wrong most of the time,<br><br>
+            But GOD always chooses this equation which is always right<br><br>
+            X &lt; Y = X &gt; Y<br><br>
+            Your pens are broken<br><br>
+            And the consequences are visibly invisible
+          </div>
+        </div>
+
+        <div class="base-card">
+          <h3>Base3:</h3>
+          <div class="base-body">
+            What is the role of the King in chess and real life? What is the role of the one and only GOD in an imaginary chess and real life?<br><br>
+            King:<br><br>
+            The movement of the king in chess is very restrictive, The king can't even move when the game starts, but the whole game is based on the king and the king is a game changer, because in order to win the game gotta reach the opposite king.<br><br>
+            GOD:<br><br>
+            I do respect to the one only GOD, which all religions are talking about and I'm ok with the opposites.<br><br>
+            What if GOD decides to play a complicated game as an imaginary chess?<br><br>
+            There is no competitor because he is one and only and he can play on both sides.<br><br>
+            The lives are his, The games are his, The Kings are his.<br><br>
+            Ladies and gentlemen<br><br>
+            The GOD is so powerful, The GOD is so GOD
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-note">
+        © <span id="year"></span> GOD.EXPRESS
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
