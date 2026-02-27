@@ -1,4 +1,4 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -14,7 +14,6 @@
   <meta property="og:description" content="" />
   <meta property="og:url" content="https://www.god.express/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/aminlogic/God.express/main/assets/Facebook.jpg" />
-
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -29,35 +28,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-
-<style>
-.hero-frame {
-  max-width: 400px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 2px solid rgba(255,255,255,0.12);
-  box-shadow: 0 25px 70px rgba(0,0,0,0.75);
-  transition: 0.25s;
-}
-.hero-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-@media(max-width:900px){
-  .hero-frame { max-width: 320px; }
-}
-@media(max-width:500px){
-  .hero-frame { max-width: 260px; }
-}
-</style>
-
-
-      
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- HERO IMAGE SIZE FIX (only modification) -->
+  <style>
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-frame {
+      width: 100%;
+      max-width: 380px; /* Perfect balanced desktop size */
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.12);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.75);
+      transition: 0.25s ease;
+    }
+
+    .hero-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-frame:hover {
+      transform: scale(1.02);
+    }
+
+    @media(max-width:900px){
+      .hero-frame { max-width: 300px; }
+    }
+
+    @media(max-width:600px){
+      .hero-frame { max-width: 240px; }
+    }
+  </style>
+
 </head>
 
 <body>
