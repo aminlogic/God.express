@@ -7,62 +7,80 @@
 <title>Aminlogic</title>
 
 <style>
-
 body {
     margin: 0;
     padding: 0;
-    font-family: Georgia, serif;
-    background: #0f0f0f;
-    color: #f5f5f5;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
 }
 
-/* Container */
-.container {
-    width: 95%;
-    max-width: 700px;
-    margin: auto;
+/* ===== TOP SECTION ===== */
+.top-section {
+    text-align: center;
     padding: 20px 10px;
 }
 
-/* Profile Image */
-.profile-img {
-    width: 150px;              /* BEST MOBILE SIZE */
-    max-width: 70%;            /* prevents overflow */
+.top-section img {
+    width: 140px;          /* IMAGE SIZE FIXED */
+    max-width: 60%;
     height: auto;
     border-radius: 50%;
+}
+
+.top-section h1 {
+    margin: 10px 0 5px;
+}
+
+.top-section p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
     margin-top: 20px;
 }
 
-/* Title */
-h1 {
-    font-size: 24px;
-    margin: 15px 0 5px;
-}
-
-.subtitle {
+.buttons a {
+    text-decoration: none;
+    background: #222;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
     font-size: 14px;
-    opacity: 0.8;
-    margin-bottom: 20px;
+    transition: 0.3s;
 }
 
-/* Posts Section */
-.posts-box {
-    background: #1a1a1a;
+.buttons a:hover {
+    background: #333;
+}
+
+/* ===== POSTS SECTION ===== */
+.posts {
+    margin: 30px 15px;
     padding: 15px;
-    border-radius: 12px;
-    text-align: left;
-    white-space: pre-wrap;     /* SHOWS posts.txt EXACTLY */
+    background: #1a1a1a;
+    border-radius: 10px;
+    white-space: pre-wrap;        /* SHOWS posts.txt EXACTLY */
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 14px;
 }
 
-/* Footer */
-footer {
-    margin-top: 30px;
-    font-size: 12px;
-    opacity: 0.6;
+/* ===== MOBILE SAFETY ===== */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 </style>
@@ -70,30 +88,29 @@ footer {
 
 <body>
 
-<div class="container">
-
-    <!-- YOUR IMAGE -->
-    <img src="yourimage.jpg" alt="Aminlogic" class="profile-img">
-
+<div class="top-section">
+    <img src="yourimage.jpg" alt="Aminlogic">
     <h1>Aminlogic</h1>
-    <div class="subtitle">Mystic • Creator • Digital Philosopher</div>
-
-    <!-- POSTS.TXT DISPLAY -->
-    <div class="posts-box">
-        <script>
-            fetch('posts.txt')
-            .then(response => response.text())
-            .then(data => {
-                document.querySelector('.posts-box').textContent = data;
-            });
-        </script>
-    </div>
-
-    <footer>
-        © 2026 Aminlogic
-    </footer>
-
+    <p>Mystic • Creator • Digital Philosopher</p>
 </div>
+
+<div class="buttons">
+    <a href="#">Instagram</a>
+    <a href="#">TikTok</a>
+    <a href="#">YouTube</a>
+</div>
+
+<div class="posts" id="postsBox">
+Loading posts...
+</div>
+
+<script>
+fetch("posts.txt")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("postsBox").textContent = data;
+});
+</script>
 
 </body>
 </html>
