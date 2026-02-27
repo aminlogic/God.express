@@ -201,7 +201,7 @@ a{
   border-color:rgba(255,255,255,0.35);
 }
 
-/* RIGHT SIDE OG IMAGE */
+/* RIGHT SIDE IMAGE */
 .hero-image{
   display:flex;
   justify-content:center;
@@ -226,10 +226,12 @@ a{
 
 .og-frame img{
   width:100%;
+  height:auto;
   display:block;
   object-fit:cover;
 }
 
+/* HERO BADGE */
 .hero-badge{
   position:absolute;
   bottom:14px;
@@ -252,7 +254,7 @@ a{
   transform:translateY(-2px);
 }
 
-/* POSTS SECTION */
+/* POSTS */
 .section{
   margin-top:50px;
   padding:30px 20px;
@@ -282,7 +284,6 @@ a{
   border:1px solid rgba(255,255,255,0.06);
 }
 
-/* DATE */
 .post-date{
   font-size:13px;
   font-weight:800;
@@ -292,16 +293,14 @@ a{
 }
 
 .post-text{
-  font-family: "Segoe UI", Arial, sans-serif;
   font-size:13px;
   color:rgba(255,255,255,0.88);
   text-align:center;
   line-height:1.9;
-  white-space:pre-wrap;     /* keeps blank lines */
+  white-space:pre-wrap;
   word-break:break-word;
   margin:0;
 }
-
 
 /* FOOTER */
 .footer{
@@ -312,7 +311,7 @@ a{
   color:rgba(255,255,255,0.55);
 }
 
-/* MOBILE RESPONSIVE */
+/* TABLET */
 @media(max-width:900px){
   .hero-inner{
     grid-template-columns:1fr;
@@ -326,12 +325,29 @@ a{
 
   .og-frame{
     max-width:360px;
+    margin:auto;
   }
 }
 
+/* MOBILE */
 @media(max-width:500px){
+
+  .hero-inner{
+    padding:35px 16px;
+  }
+
   .hero-text h1{
-    font-size:28px;
+    font-size:26px;
+  }
+
+  .og-frame{
+    max-width:260px;
+    margin:auto;
+  }
+
+  .og-frame img{
+    height:320px;
+    object-fit:cover;
   }
 
   .btn{
@@ -343,4 +359,5 @@ a{
     flex-direction:column;
     align-items:stretch;
   }
+
 }
